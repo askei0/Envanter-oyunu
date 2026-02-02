@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Runtime.CompilerServices;
 
 class Program
@@ -7,23 +8,14 @@ class Program
     static void Main(string[] args)
     {
 
-        List<string> envanter = new List<string>();
-        envanter.Add("Sword");
-        envanter.Add("Bread");
-        envanter.Add("Key");
-        envanter.Add("Shield");
-
-        foreach (string esya in envanter)
+        for (int i = 0; i < 5; i++)
         {
-            if (esya == "Key")
+            for (int j = 0; j < 5; j++)
             {
-                Console.WriteLine("Congrats, the door is open");
+                Console.Write("*");
             }
-            else
-            {
-                Console.WriteLine("You do not have a key in your inventory.");
-            }
-        }
+            Console.WriteLine();
+        } 
 
     }
 }
