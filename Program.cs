@@ -11,6 +11,7 @@ class Program
         // Tek satırda hem yarat, hem doldur.
         Savasci asker1 = new Savasci("Barbar", 100, 25);
         Savasci asker2 = new Savasci("Okcu", 80, 40);
+        asker1.Saldir(asker2); // Barbar, Okçu'ya saldırsın.
 
         asker1.BilgiGoster();
         asker2.BilgiGoster();
@@ -53,6 +54,12 @@ class Savasci
     public string Isim;
     public int Can;
     public int HasarGucu;
+    public void Saldir(Savasci hedef)
+    {
+        hedef.Can -= HasarGucu;
+        Console.WriteLine(Isim + " saldırıyor ve " + hedef.Isim + "'e " + HasarGucu + " hasar veriyor!");
+        Console.WriteLine(hedef.Isim + " kalan cani: " + hedef.Can);
+    }
     // --- CONSTRUCTOR ---
     public Savasci(string isim, int can, int guc)
     {
